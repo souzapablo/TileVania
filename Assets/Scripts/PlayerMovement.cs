@@ -78,7 +78,7 @@ public class PlayerMovement : MonoBehaviour
         Vector2 climbVelocity = new Vector2(myRigigbody.velocity.x, moveInput.y * climbSpeed);
         myRigigbody.velocity = climbVelocity;
         myRigigbody.gravityScale = 0f;
-
+        
         bool playerVericalSpeed = Mathf.Abs(myRigigbody.velocity.y) > Mathf.Epsilon;
         myAnimator.SetBool("isClimbing", playerVericalSpeed);
     }
